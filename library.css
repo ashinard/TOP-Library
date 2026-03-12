@@ -1,4 +1,135 @@
 *{
-    margin: 0;
-    padding: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 2fr 1fr;
+}
+
+.books{
+  grid-column: 1/2;
+  display: grid;
+  justify-items: center;
+  
+  border-style: solid;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: .5rem 0;
+}
+
+#addingBooks{
+  grid-column: 2/3;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(5px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: .25rem 2.5rem .25rem .25rem;
+  margin-top: 10px;
+  height: 275px;
+  position: sticky;
+}
+
+#addingBooks h2{
+  padding-left: 2rem;
+}
+
+#addingBooks div{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: end;
+  gap: .75rem;
+}
+
+#addingBooks div label{
+  grid-column: 1/2;
+}
+
+#addingBooks div input{
+  grid-column: 2/3;
+  margin-right: 1rem;
+  width: 9.5vw
+}
+
+#addingBooks div #readStatus{
+  grid-column: 2/3;
+  margin-right: 1rem;
+  width: 9.5vw;
+}
+
+#shelf{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+  justify-items: center;
+  
+  padding: 1rem;
+  width: 60vw;
+}
+
+#shelf article{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  place-items: center;
+  gap: 5px;
+  
+  padding: .5rem;
+  width: 90%;
+  height: 100%;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  font-size: .8rem;
+}
+
+.bookDesc{
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.readStat{
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+.removal{
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.changeStatus{
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+#stack{
+  margin-left: 2.7rem;
+}
+
+button{
+  padding: .1rem .25rem;
+  border-radius: 15px;
+  border-width: 1px;
+}
+
+#addingBooks div input:active,
+#addingBooks div input:hover,
+#addingBooks div input:focus{
+  outline: none;
+}
+
+#readStatus:active,
+#readStatus:hover,
+#readStatus:focus{
+  outline: none;
 }
