@@ -133,7 +133,7 @@ const shelf = document.getElementById("shelf");
 const stories = document.getElementsByClassName("removal");
 const changeButton = document.getElementsByClassName("changeStatus");
 const toTheLog = document.getElementById("backlog");
-form.style.visibility = "collapse";
+form.style.visibility = "hidden";
 displayBooks();
 
 form.addEventListener("submit", function (e){
@@ -144,7 +144,7 @@ form.addEventListener("submit", function (e){
   console.log(e.target.readStatus.value);
   addBookToLibrary(e);
   form.reset();
-  form.style.visibility = "collapse";
+  form.style.visibility = "hidden";
 });
 
 for(let i = 0; i < stories.length; i++){
@@ -157,7 +157,7 @@ for(let i = 0; i < stories.length; i++){
         library.splice(a, 1);
       }
     }
-   });
+  });
 }
 
 toTheLog.addEventListener("click", e => {
