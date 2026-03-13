@@ -76,7 +76,7 @@ body{
   width: 60vw;
 }
 
-#shelf article{
+.story{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -85,7 +85,7 @@ body{
   
   padding: .5rem;
   width: 90%;
-  height: 100%;
+  height: 25vh;
   border-style: solid;
   border-radius: 5px;
   border-width: 1px;
@@ -105,11 +105,17 @@ body{
 .removal{
   grid-column: 1/2;
   grid-row: 3/4;
+  height: 2rem;
 }
 
 .changeStatus{
   grid-column: 2/3;
   grid-row: 3/4;
+  height: 2rem;
+}
+
+#backlog{
+  height: 1.5rem;
 }
 
 #stack{
@@ -120,6 +126,9 @@ button{
   padding: .1rem .25rem;
   border-radius: 15px;
   border-width: 1px;
+
+  display: flex;
+  align-items: center;
 }
 
 #addingBooks div input:active,
